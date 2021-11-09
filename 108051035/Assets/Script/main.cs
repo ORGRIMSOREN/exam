@@ -4,12 +4,13 @@ using UnityEngine;
 /// </summary>
 public class main : MonoBehaviour
 {
-    public float moveSpeed;
+    private float moveSpeed=0.05f;
+    public Rigidbody2D Rb;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        Rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -18,7 +19,7 @@ public class main : MonoBehaviour
         Vector2 Move = transform.position;
         Move.x = Move.x + Input.GetAxis("Horizontal") * moveSpeed;
 
-        transform.position = Move;
+        Rb.position = Move;
     }
     
 }
