@@ -19,6 +19,8 @@ public class contoorller2d : MonoBehaviour
     [Header("動畫參數")]
     public string anwalk="走路開關";
     public string anjumping="主角跳躍";
+    GameContorller GameContorller;
+    public GameObject player;
     #endregion
     #region 欄位私人
     [SerializeField]
@@ -38,6 +40,7 @@ public class contoorller2d : MonoBehaviour
     {
         rig = GetComponent<Rigidbody2D>();
         ani = GetComponent<Animator>();
+        GameContorller = GameObject.Find("GameContorller").GetComponent<GameContorller>();
     }
 
    
@@ -101,6 +104,18 @@ public class contoorller2d : MonoBehaviour
 
         }
         ani.SetBool(anjumping, !isgrounded);
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("dead") == true)
+        {
+
+            Destroy(player);
+            GameContorller.GameOver();
+
+
+        }
+
     }
 
     #endregion

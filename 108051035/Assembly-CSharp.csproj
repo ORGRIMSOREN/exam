@@ -64,6 +64,9 @@
     <Compile Include="Assets\scrip\contoorller2d.cs" />
     <Compile Include="Assets\Script\main.cs" />
     <Compile Include="Assets\scrip\loop.cs" />
+    <Compile Include="Assets\Script\boder.cs" />
+    <Compile Include="Assets\Script\GameContorller.cs" />
+    <Compile Include="Assets\scrip\Collectable.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

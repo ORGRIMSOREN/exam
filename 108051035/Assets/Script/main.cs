@@ -21,5 +21,12 @@ public class main : MonoBehaviour
 
         Rb.position = Move;
     }
-    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("dead")==true)
+        {
+            Destroy(gameObject);
+
+        }
+    }
 }
