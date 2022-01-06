@@ -14,15 +14,20 @@ public class Collectable : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //pickEffectP.Play();
+        
 
         //【產生特效】
-        Instantiate(pickE, gameObject.transform.position, Quaternion.identity);
+       
 
+        if (collision.CompareTag("book"))
+        {
+            Instantiate(pickE, gameObject.transform.position, Quaternion.identity);
+            
+        }
         
 
         //【產生音效 2】
-        rubyGO.PlaySound(audioClip);
+        //PlaySound(audioClip);
 
         Destroy(gameObject);
     }

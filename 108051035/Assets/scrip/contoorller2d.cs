@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class contoorller2d : MonoBehaviour
 {
     #region 欄位 開放
+   
     [Header("移動速度"), Range(0, 100)]
     public float speed =3.5f;
     [Header("跳躍高度"), Range(100, 500)]
@@ -21,6 +24,8 @@ public class contoorller2d : MonoBehaviour
     public string anjumping="主角跳躍";
     GameContorller GameContorller;
     public GameObject player;
+    public GameObject book;
+    public int books;
     #endregion
     #region 欄位私人
     [SerializeField]
@@ -115,12 +120,23 @@ public class contoorller2d : MonoBehaviour
 
 
         }
+        if (collision.CompareTag("book") == true)
+        {
+            Destroy(book);
+            LoadLevel();
+
+        }
+    }
+        public void LoadLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
     }
+}
 
     #endregion
 
-}
+
 
 
 

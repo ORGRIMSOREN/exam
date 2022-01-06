@@ -62,11 +62,11 @@ public class enmeny : MonoBehaviour
         {
             //angle = 0;
         }
-        angle = face.position.x > transform.position.x ? 0 :180;
+        angle = face.position.x > transform.position.x ?   0 :180;
         transform.eulerAngles = Vector3.up * angle;
 
         float distance = Vector3.Distance(face.position, transform.position);
-        print("目標距離" + distance);
+        //print("目標距離" + distance);
         rig.velocity = transform.TransformDirection( new Vector2(speed, rig.velocity.y));
         ani.SetBool("走路", true);
     }
