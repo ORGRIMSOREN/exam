@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4710679289662459287}
   - component: {fileID: 4710679289662459290}
   - component: {fileID: 4710679289662459285}
+  - component: {fileID: 1395947299066207683}
   - component: {fileID: 4710679289662459284}
   m_Layer: 7
   m_Name: "\u4E3B\u89D2"
@@ -142,6 +143,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1395947299066207683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4710679289662459280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c68286f2f026b2419db0745aa7bcb3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imgHp: {fileID: 0}
+  hp: 100
 --- !u!114 &4710679289662459284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,4 +180,7 @@ MonoBehaviour:
   anwalk: "\u8D70\u8DEF\u958B\u95DC"
   anjumping: "\u4E3B\u89D2\u8DF3\u8E8D"
   player: {fileID: 4710679289662459280}
+  book: {fileID: 0}
+  books: 0
+  hp: 100
   isgrounded: 1

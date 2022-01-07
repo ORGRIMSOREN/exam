@@ -26,6 +26,7 @@ public class contoorller2d : MonoBehaviour
     public GameObject player;
     public GameObject book;
     public int books;
+    
     #endregion
     #region Äæ¦ì¨p¤H
     [SerializeField]
@@ -77,6 +78,10 @@ public class contoorller2d : MonoBehaviour
         ani.SetBool(anwalk, Horizontal != 0);
     }
     
+    void  Attack()
+    {
+
+    }
     
     private void  Flip()
     {
