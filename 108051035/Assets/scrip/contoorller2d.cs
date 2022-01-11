@@ -28,6 +28,9 @@ public class contoorller2d : MonoBehaviour
     public GameObject book;
     public int books;
     public string pickbooks;
+    [Header("¤l¼u")]
+    public GameObject bulletPrefab;
+    public Transform firePoint;
     #endregion
     #region Äæ¦ì¨p¤H
     [SerializeField]
@@ -57,6 +60,7 @@ public class contoorller2d : MonoBehaviour
         Flip();
         CheckingGround();
         jumping();
+        Fire();
     }
 
 
@@ -136,6 +140,15 @@ public class contoorller2d : MonoBehaviour
         public void LoadLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+    }
+    void Fire()
+    {
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+            
+        }
 
     }
 }

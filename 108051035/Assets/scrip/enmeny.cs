@@ -1,5 +1,6 @@
 
 using UnityEngine;
+using UnityEngine.Events;
 
 public class enmeny : MonoBehaviour
 {
@@ -28,6 +29,8 @@ public class enmeny : MonoBehaviour
     float timerattack;
     public string attackani=("攻擊開關");
     public string walkani=("走路開關");
+    public UnityEvent pass;
+
     #endregion
 
     #region 事件
@@ -105,6 +108,14 @@ public class enmeny : MonoBehaviour
             timerattack = 0;
             Collider2D hit = Physics2D.OverlapBox(transform.position + transform.TransformDirection(attackOffeSet), attackSize, 0, layerTarget);
             hit.GetComponent<hpsystem>().Hurt(damage);
+        }
+    }
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("magic")==true)
+        {
+            Destroy(gameObject);
+            pass.Invoke();
         }
     }
     #endregion

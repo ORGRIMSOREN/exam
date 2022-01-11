@@ -56,6 +56,7 @@
     <Compile Include="Assets\scrip\enmeny.cs" />
     <Compile Include="Assets\scrip\hpsystem.cs" />
     <Compile Include="Assets\scrip\Collectable.cs" />
+    <Compile Include="Assets\Script\bookpick.cs" />
     <Compile Include="Assets\scrip\npc.cs" />
     <Compile Include="Assets\Script\book.cs" />
     <Compile Include="Assets\scrip\dialogueSystem.cs" />
@@ -70,7 +71,8 @@
     <Compile Include="Assets\Script\boder.cs" />
     <Compile Include="Assets\Script\main.cs" />
     <Compile Include="Assets\scrip\loop.cs" />
-    <Compile Include="Assets\Script\bookpick.cs" />
+    <Compile Include="Assets\Script\magic.cs" />
+    <Compile Include="Assets\scrip\pass.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

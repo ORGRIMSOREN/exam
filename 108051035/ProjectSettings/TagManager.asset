@@ -6,6 +6,8 @@ TagManager:
   tags:
   - dead
   - book
+  - magic
+  - bad
   layers:
   - Default
   - TransparentFX
