@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 
 public class contoorller2d : MonoBehaviour
@@ -22,10 +23,11 @@ public class contoorller2d : MonoBehaviour
     [Header("動畫參數")]
     public string anwalk="走路開關";
     public string anjumping="主角跳躍";
-    GameContorller GameContorller;
+    public UnityEvent drop;
     public GameObject player;
     public GameObject book;
     public int books;
+    public string pickbooks;
     #endregion
     #region 欄位私人
     [SerializeField]
@@ -45,7 +47,8 @@ public class contoorller2d : MonoBehaviour
     {
         rig = GetComponent<Rigidbody2D>();
         ani = GetComponent<Animator>();
-        GameContorller = GameObject.Find("GameContorller").GetComponent<GameContorller>();
+        
+        
     }
 
    
@@ -115,8 +118,8 @@ public class contoorller2d : MonoBehaviour
         if (collision.CompareTag("dead") == true)
         {
 
-            Destroy(player);
-            GameContorller.GameOver();
+            drop.Invoke();
+            ani.SetTrigger("觸發死亡");
 
 
         }
@@ -124,6 +127,9 @@ public class contoorller2d : MonoBehaviour
         {
             Destroy(book);
             LoadLevel();
+            
+            
+
 
         }
     }

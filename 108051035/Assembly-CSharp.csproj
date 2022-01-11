@@ -54,8 +54,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\scrip\enmeny.cs" />
+    <Compile Include="Assets\scrip\hpsystem.cs" />
     <Compile Include="Assets\scrip\Collectable.cs" />
-    <Compile Include="Assets\Script\GameControllor.cs" />
     <Compile Include="Assets\scrip\npc.cs" />
     <Compile Include="Assets\Script\book.cs" />
     <Compile Include="Assets\scrip\dialogueSystem.cs" />
@@ -64,12 +64,13 @@
     <Compile Include="Assets\scrip\learn.cs" />
     <Compile Include="Assets\Script\GameContorller.cs" />
     <Compile Include="Assets\scrip\learnArray.cs" />
+    <Compile Include="Assets\Script\Pause.cs" />
     <Compile Include="Assets\scrip\datadialogue.cs" />
     <Compile Include="Assets\scrip\contoorller2d.cs" />
     <Compile Include="Assets\Script\boder.cs" />
     <Compile Include="Assets\Script\main.cs" />
     <Compile Include="Assets\scrip\loop.cs" />
-    <Compile Include="Assets\scrip\hpsystem.cs" />
+    <Compile Include="Assets\Script\bookpick.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -21,7 +21,7 @@ public class enmeny : MonoBehaviour
     [Header("­±¦V¤è¦V")]
     public Transform face;
     private float angle = 0;
-    [Header("§ğÀ»¶ZÂ÷"),Range(0,5)]
+    [Header("§ğÀ»¶ZÂ÷"),Range(0,30)]
     public float attackDistance=1.3f;
     [Header("§ğÀ»§N«o"), Range(0, 10)]
     public float attackCd = 2.8f;
@@ -91,7 +91,7 @@ public class enmeny : MonoBehaviour
         
     }
     [Header("§ğÀ»¤O"), Range(0, 100)]
-    public float damage = 35;
+    public float damage = 100;
     void attack()
     {
         if (timerattack < attackCd)

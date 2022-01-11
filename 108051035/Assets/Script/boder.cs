@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class boder : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class boder : MonoBehaviour
         if (collision.CompareTag("Player")==true)
         {
             Destroy(player);
+            SceneManager.LoadScene("¹CÀ¸³õ´º");
         }
     }
 }
