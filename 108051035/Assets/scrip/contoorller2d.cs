@@ -144,7 +144,7 @@ public class contoorller2d : MonoBehaviour
     }
     void Fire()
     {
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
             
